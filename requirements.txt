@@ -1,0 +1,5 @@
+telethon
+psycopg2-binary
+sqlalchemy
+python-dotenv
+dbt-postgres
