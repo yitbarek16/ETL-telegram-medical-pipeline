@@ -1,0 +1,16 @@
+name: 'telegram_dbt'
+version: '1.0.0'
+profile: 'telegram_dbt'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  telegram_dbt:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+        +schema: analytics
+        +materialized: table
