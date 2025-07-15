@@ -4,9 +4,6 @@ This project builds a full ETL (Extract, Transform, Load) pipeline to collect, p
 
 ---
 
-
----
-
 ## what i did in this project
 
 ### **Project Setup & Data Ingestion**
