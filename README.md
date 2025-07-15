@@ -6,7 +6,7 @@ This project builds a full ETL (Extract, Transform, Load) pipeline to collect, p
 
 ## what i did in this project
 
-### **Project Setup & Data Ingestion**
+### Project Setup & Data Ingestion
 
 - Initialized Git and GitHub repository for version control.
 - Created a Docker-based development environment using `docker-compose`, with:
@@ -17,7 +17,7 @@ This project builds a full ETL (Extract, Transform, Load) pipeline to collect, p
 - Stored messages in newline-delimited `.jsonl` format in a structured data lake (`/data/channel_name/date.jsonl`).
 - Built a Python script to load raw JSONL files into a `raw.telegram_messages` table in PostgreSQL.
 
-### ** Raw Layer and Schema Setup**
+### Raw Layer and Schema Setup 
 
 - Designed and created PostgreSQL schemas:
   - `raw` – Stores raw ingested messages.
@@ -26,7 +26,7 @@ This project builds a full ETL (Extract, Transform, Load) pipeline to collect, p
 - Verified data load into `raw.telegram_messages` using SQL CLI.
 - Ensured that Docker volumes and working directories allow seamless container access to the database and source files.
 
-### ** Data Modeling & Transformation with dbt**
+### Data Modeling & Transformation with dbt
 
 - Installed and initialized a `dbt` project inside the Python container.
 - Created **staging models**:
