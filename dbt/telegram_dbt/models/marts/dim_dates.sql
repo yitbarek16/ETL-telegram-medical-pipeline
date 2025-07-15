@@ -18,5 +18,5 @@ dim_dates as (
         to_char(date_day, 'Day') as weekday
     from dates
 )
-
+ 
 select * from dim_dates

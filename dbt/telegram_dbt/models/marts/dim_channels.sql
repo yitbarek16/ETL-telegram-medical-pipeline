@@ -11,4 +11,4 @@ dim_channels as (
     from messages
 )
 
-select * from dim_channels
+select * from dim_channels 
