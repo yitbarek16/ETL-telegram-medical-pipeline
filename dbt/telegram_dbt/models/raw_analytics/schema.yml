@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_channels
+    description: "Dimension table containing channel metadata"
+    columns:
+      - name: channel_id
+        tests: [unique, not_null]
+
+  - name: dim_dates
+    description: "Calendar date dimension"
+    columns:
+      - name: date_day
+        tests: [unique, not_null]
+
+  - name: fct_messages
+    description: "Fact table with Telegram messages and metrics"
+    columns:
+      - name: message_id
+        tests: [unique, not_null]
+      - name: channel_id
+        tests: [not_null]
+      - name: date_day
+        tests: [not_null]
+tests:
+  - name: no_null_channels
+    description: "Ensure all messages are linked to a channel"

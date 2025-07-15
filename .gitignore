@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 dbt/target/
+dbt/logs/
+dbt/bash.exe.stackdump
+logs/
+

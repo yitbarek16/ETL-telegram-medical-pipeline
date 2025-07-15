@@ -20,8 +20,12 @@ services:
       - .env
     depends_on:
       - db
+    working_dir: /app/dbt/telegram_dbt
     volumes:
       - .:/app
-
+      - /c/Users/user/.dbt:/root/.dbt
+    ports:
+      - "8080:8080" 
+    command: tail -f /dev/null 
 volumes:
   pgdata:

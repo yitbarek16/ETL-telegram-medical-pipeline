@@ -24,7 +24,7 @@ fct as (
         media_type
     from messages
 )
-
+ 
 select * from fct
   );
   
