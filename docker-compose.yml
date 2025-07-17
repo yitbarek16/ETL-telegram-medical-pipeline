@@ -25,7 +25,7 @@ services:
       - .:/app
       - /c/Users/user/.dbt:/root/.dbt
     ports:
-      - "8080:8080" 
+      - "8000:8000" 
     command: tail -f /dev/null 
 volumes:
   pgdata:

@@ -6,9 +6,11 @@ with messages as (
 
 fct as (
     select
+        channel_name,
         md5(channel_name) as channel_id,
         message_date::date as date_day,
         message_id,
+        message_text,
         length(message_text) as message_length,
         has_media,
         media_type

@@ -11,3 +11,5 @@ torchaudio==2.1.0+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
 numpy<2.0
 opencv-python
+fastapi
+uvicorn
