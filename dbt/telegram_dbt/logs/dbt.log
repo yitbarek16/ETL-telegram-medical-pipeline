@@ -5794,3 +5794,2028 @@ KeyboardInterrupt
 [0m11:15:29.570094 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt docs serve --port 8080 --host 0.0.0.0', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
 [0m11:15:30.483044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4a808f44-ea39-41a7-b53a-4ab4fa94979f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b7201e4a0>]}
 [0m11:15:30.786035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4a808f44-ea39-41a7-b53a-4ab4fa94979f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b72faa830>]}
+[0m14:45:33.891036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf68909d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf5802830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf5802890>]}
+
+
+============================== 14:45:33.907933 | 1c48ccb1-3218-4b33-8c9b-b00117fca212 ==============================
+[0m14:45:33.907933 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:45:33.913073 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/app/dbt/telegram_dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select fct_image_detections', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:45:34.519931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c48ccb1-3218-4b33-8c9b-b00117fca212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf4b13f10>]}
+[0m14:45:34.645754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1c48ccb1-3218-4b33-8c9b-b00117fca212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf60a3820>]}
+[0m14:45:34.649919 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:45:34.921230 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:45:36.171250 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m14:45:36.173915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1c48ccb1-3218-4b33-8c9b-b00117fca212', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf6077ac0>]}
+[0m14:45:40.091480 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.telegram_dbt.fct_image_detections' (models/marts/fct_image_detections.sql) depends on a source named 'raw.image_detections' which was not found
+[0m14:45:40.228640 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.5907335, "process_in_blocks": "86800", "process_kernel_time": 0.367785, "process_mem_max_rss": "115864", "process_out_blocks": "424", "process_user_time": 6.808997}
+[0m14:45:40.249701 [debug] [MainThread]: Command `dbt run` failed at 14:45:40.248620 after 6.61 seconds
+[0m14:45:40.255828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf68909d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf3bb4d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bf3756140>]}
+[0m14:45:40.260210 [debug] [MainThread]: Flushing usage events
+[0m14:45:41.560950 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:50:29.981822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc74c04850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc73b4ae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc73b4aec0>]}
+
+
+============================== 14:50:30.016617 | cdd9341e-b69e-4b91-8617-d9426bbabebc ==============================
+[0m14:50:30.016617 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:50:30.027066 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/app/dbt/telegram_dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --select fct_image_detections', 'send_anonymous_usage_stats': 'True'}
+[0m14:50:30.935340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc73b1bfd0>]}
+[0m14:50:31.067765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc743f09a0>]}
+[0m14:50:31.079590 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:50:31.620600 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:50:31.929403 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m14:50:31.933235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc7437b880>]}
+[0m14:50:36.678151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc70de8130>]}
+[0m14:50:37.078639 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:50:37.096524 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:50:37.211084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc70de1fc0>]}
+[0m14:50:37.214663 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m14:50:37.220573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc75718a30>]}
+[0m14:50:37.229494 [info ] [MainThread]: 
+[0m14:50:37.233663 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:50:37.259969 [info ] [MainThread]: 
+[0m14:50:37.268713 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:50:37.275296 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m14:50:38.564685 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m14:50:38.568755 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:50:38.570795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:50:38.714999 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.144 seconds
+[0m14:50:38.721766 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m14:50:38.736231 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_staging)
+[0m14:50:38.749913 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:50:38.752216 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m14:50:38.754444 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:50:39.173198 [debug] [ThreadPool]: SQL status: BEGIN in 0.422 seconds
+[0m14:50:39.182562 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:50:39.186131 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m14:50:39.499952 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.310 seconds
+[0m14:50:39.511972 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m14:50:39.519720 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m14:50:39.527945 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now list_telegram_db_raw_analytics)
+[0m14:50:39.538640 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:50:39.542229 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m14:50:39.545340 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:50:39.561773 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m14:50:39.563545 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:50:39.565435 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m14:50:39.571105 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.004 seconds
+[0m14:50:39.574539 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m14:50:39.576704 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m14:50:39.839273 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:39.846650 [debug] [MainThread]: On master: BEGIN
+[0m14:50:39.849582 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:50:39.863118 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m14:50:39.865759 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:39.868239 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:50:40.268083 [debug] [MainThread]: SQL status: SELECT 1 in 0.397 seconds
+[0m14:50:40.272915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc76487f10>]}
+[0m14:50:40.275741 [debug] [MainThread]: On master: ROLLBACK
+[0m14:50:40.278842 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:40.281890 [debug] [MainThread]: On master: BEGIN
+[0m14:50:40.285596 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:50:40.287969 [debug] [MainThread]: On master: COMMIT
+[0m14:50:40.290364 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:40.292937 [debug] [MainThread]: On master: COMMIT
+[0m14:50:40.296129 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:50:40.298538 [debug] [MainThread]: On master: Close
+[0m14:50:40.558002 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m14:50:40.560878 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m14:50:40.563689 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now model.telegram_dbt.fct_image_detections)
+[0m14:50:40.565870 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m14:50:40.590588 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m14:50:40.607644 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m14:50:40.736291 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m14:50:40.876118 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:50:40.881004 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m14:50:40.886223 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:50:40.909521 [debug] [Thread-1 (]: SQL status: BEGIN in 0.024 seconds
+[0m14:50:40.911939 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:50:40.914463 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel,
+    m.date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.id
+
+
+  );
+  
+  
+[0m14:50:40.924803 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column m.id does not exist
+LINE 24:     ON d.message_id = m.id
+                               ^
+HINT:  Perhaps you meant to reference the column "d.id".
+
+[0m14:50:40.927262 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: ROLLBACK
+[0m14:50:40.930118 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m14:50:40.956569 [debug] [Thread-1 (]: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:50:40.963504 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdd9341e-b69e-4b91-8617-d9426bbabebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc71739f00>]}
+[0m14:50:40.966189 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model raw_analytics.fct_image_detections . [[31mERROR[0m in 0.40s]
+[0m14:50:40.970230 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m14:50:40.974843 [debug] [Thread-4 (]: Marking all children of 'model.telegram_dbt.fct_image_detections' to be skipped because of status 'error'.  Reason: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql.
+[0m14:50:40.984161 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:40.987010 [debug] [MainThread]: On master: BEGIN
+[0m14:50:40.989580 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:50:41.005095 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m14:50:41.007907 [debug] [MainThread]: On master: COMMIT
+[0m14:50:41.009963 [debug] [MainThread]: Using postgres connection "master"
+[0m14:50:41.012615 [debug] [MainThread]: On master: COMMIT
+[0m14:50:41.014968 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:50:41.017311 [debug] [MainThread]: On master: Close
+[0m14:50:41.243708 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:50:41.254297 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m14:50:41.262157 [info ] [MainThread]: 
+[0m14:50:41.272787 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 3.99 seconds (3.99s).
+[0m14:50:41.286406 [debug] [MainThread]: Command end result
+[0m14:50:41.663101 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:50:41.673208 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:50:41.720408 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m14:50:41.722811 [info ] [MainThread]: 
+[0m14:50:41.727400 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:50:41.733817 [info ] [MainThread]: 
+[0m14:50:41.739105 [error] [MainThread]: [31mFailure in model fct_image_detections (models/marts/fct_image_detections.sql)[0m
+[0m14:50:41.743437 [error] [MainThread]:   Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:50:41.750463 [info ] [MainThread]: 
+[0m14:50:41.754444 [info ] [MainThread]:   compiled code at target/compiled/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:50:41.758817 [info ] [MainThread]: 
+[0m14:50:41.765380 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:50:41.775881 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 12.090656, "process_in_blocks": "91008", "process_kernel_time": 0.6779, "process_mem_max_rss": "126260", "process_out_blocks": "16", "process_user_time": 10.349285}
+[0m14:50:41.781001 [debug] [MainThread]: Command `dbt run` failed at 14:50:41.780626 after 12.10 seconds
+[0m14:50:41.783160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc74c04850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc70dc5450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbc71792cb0>]}
+[0m14:50:41.785394 [debug] [MainThread]: Flushing usage events
+[0m14:50:43.115340 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:51:03.131885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f208333c880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20822aae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20822aaec0>]}
+
+
+============================== 14:51:03.139227 | 7b91bad3-a305-4f73-908c-f0c358ff1889 ==============================
+[0m14:51:03.139227 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:51:03.142910 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/app/dbt/telegram_dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select fct_image_detections', 'send_anonymous_usage_stats': 'True'}
+[0m14:51:03.550877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20822aae30>]}
+[0m14:51:03.677391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2082435180>]}
+[0m14:51:03.680244 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:51:03.877108 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:51:04.435785 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:51:04.466601 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:51:04.747129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f208096c130>]}
+[0m14:51:04.994655 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:51:05.006086 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:51:05.040562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2080deee60>]}
+[0m14:51:05.043275 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m14:51:05.046353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2080dee770>]}
+[0m14:51:05.051734 [info ] [MainThread]: 
+[0m14:51:05.056969 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:51:05.069535 [info ] [MainThread]: 
+[0m14:51:05.075202 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:51:05.086282 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m14:51:05.231021 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m14:51:05.233198 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:51:05.235619 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:51:05.315858 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.080 seconds
+[0m14:51:05.321904 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m14:51:05.509913 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_staging)
+[0m14:51:05.537488 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:51:05.540160 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m14:51:05.542835 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:51:05.557297 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m14:51:05.559357 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:51:05.561328 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m14:51:05.567994 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.005 seconds
+[0m14:51:05.571744 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m14:51:05.574060 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m14:51:05.628268 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now list_telegram_db_raw_analytics)
+[0m14:51:05.642791 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:51:05.645402 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m14:51:05.648077 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:51:05.670407 [debug] [ThreadPool]: SQL status: BEGIN in 0.022 seconds
+[0m14:51:05.673847 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:51:05.676640 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m14:51:05.684428 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.005 seconds
+[0m14:51:05.688587 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m14:51:05.691546 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m14:51:05.878972 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:05.884917 [debug] [MainThread]: On master: BEGIN
+[0m14:51:05.890308 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:51:05.924875 [debug] [MainThread]: SQL status: BEGIN in 0.034 seconds
+[0m14:51:05.928688 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:05.933184 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:51:05.957211 [debug] [MainThread]: SQL status: SELECT 1 in 0.020 seconds
+[0m14:51:05.961032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2080919ff0>]}
+[0m14:51:06.087391 [debug] [MainThread]: On master: ROLLBACK
+[0m14:51:06.095519 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:06.103450 [debug] [MainThread]: On master: BEGIN
+[0m14:51:06.113506 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m14:51:06.119822 [debug] [MainThread]: On master: COMMIT
+[0m14:51:06.124342 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:06.129009 [debug] [MainThread]: On master: COMMIT
+[0m14:51:06.134192 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m14:51:06.138844 [debug] [MainThread]: On master: Close
+[0m14:51:06.265298 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m14:51:06.274466 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m14:51:06.292841 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now model.telegram_dbt.fct_image_detections)
+[0m14:51:06.298281 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m14:51:06.344586 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m14:51:06.361348 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m14:51:06.481734 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m14:51:06.497625 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:51:06.499893 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m14:51:06.502358 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:51:06.515799 [debug] [Thread-1 (]: SQL status: BEGIN in 0.013 seconds
+[0m14:51:06.518431 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:51:06.521422 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel,
+    m.date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.id
+
+
+  );
+  
+  
+[0m14:51:06.525855 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column m.id does not exist
+LINE 24:     ON d.message_id = m.id
+                               ^
+HINT:  Perhaps you meant to reference the column "d.id".
+
+[0m14:51:06.528750 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: ROLLBACK
+[0m14:51:06.531750 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m14:51:06.538733 [debug] [Thread-1 (]: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:51:06.544871 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b91bad3-a305-4f73-908c-f0c358ff1889', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20836275e0>]}
+[0m14:51:06.548440 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model raw_analytics.fct_image_detections . [[31mERROR[0m in 0.25s]
+[0m14:51:06.552465 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m14:51:06.555668 [debug] [Thread-4 (]: Marking all children of 'model.telegram_dbt.fct_image_detections' to be skipped because of status 'error'.  Reason: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql.
+[0m14:51:06.561442 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:06.563898 [debug] [MainThread]: On master: BEGIN
+[0m14:51:06.566028 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:51:06.579280 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m14:51:06.583046 [debug] [MainThread]: On master: COMMIT
+[0m14:51:06.588118 [debug] [MainThread]: Using postgres connection "master"
+[0m14:51:06.590718 [debug] [MainThread]: On master: COMMIT
+[0m14:51:06.595701 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:51:06.598517 [debug] [MainThread]: On master: Close
+[0m14:51:06.601854 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:51:06.604927 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m14:51:06.608482 [info ] [MainThread]: 
+[0m14:51:06.613513 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 1.53 seconds (1.53s).
+[0m14:51:06.618303 [debug] [MainThread]: Command end result
+[0m14:51:06.717976 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:51:06.728432 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:51:06.747640 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m14:51:06.749719 [info ] [MainThread]: 
+[0m14:51:06.752323 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:51:06.755373 [info ] [MainThread]: 
+[0m14:51:06.759106 [error] [MainThread]: [31mFailure in model fct_image_detections (models/marts/fct_image_detections.sql)[0m
+[0m14:51:06.771327 [error] [MainThread]:   Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.id does not exist
+  LINE 24:     ON d.message_id = m.id
+                                 ^
+  HINT:  Perhaps you meant to reference the column "d.id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:51:06.775400 [info ] [MainThread]: 
+[0m14:51:06.780791 [info ] [MainThread]:   compiled code at target/compiled/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:51:06.787971 [info ] [MainThread]: 
+[0m14:51:06.794157 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:51:06.799410 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.8074584, "process_in_blocks": "0", "process_kernel_time": 0.345417, "process_mem_max_rss": "118144", "process_out_blocks": "0", "process_user_time": 5.073326}
+[0m14:51:06.801778 [debug] [MainThread]: Command `dbt run` failed at 14:51:06.801476 after 3.81 seconds
+[0m14:51:06.803686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f208333c880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20831ccbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20809bab90>]}
+[0m14:51:06.805967 [debug] [MainThread]: Flushing usage events
+[0m14:51:07.910081 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:54:02.518762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea990c8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea8862e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea8862ec0>]}
+
+
+============================== 14:54:02.528533 | a6044885-4802-4630-9a00-e10d864c7afc ==============================
+[0m14:54:02.528533 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:54:02.532558 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select fct_image_detections', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:54:02.892731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea7f583a0>]}
+[0m14:54:03.017853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea89f11b0>]}
+[0m14:54:03.020603 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:54:03.222343 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:54:04.011639 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:54:04.014108 [debug] [MainThread]: Partial parsing: updated file: telegram_dbt://models/marts/fct_image_detections.sql
+[0m14:54:04.663479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea90a3e80>]}
+[0m14:54:04.923978 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:54:04.941830 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:54:04.976563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea90c5390>]}
+[0m14:54:04.978921 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m14:54:04.982044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea7b1ec50>]}
+[0m14:54:04.987879 [info ] [MainThread]: 
+[0m14:54:04.990666 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:54:04.994372 [info ] [MainThread]: 
+[0m14:54:04.999486 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:54:05.003209 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m14:54:05.078470 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m14:54:05.080675 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:54:05.082734 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:05.109016 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.026 seconds
+[0m14:54:05.113613 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m14:54:05.131230 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_staging)
+[0m14:54:05.148630 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:54:05.152037 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m14:54:05.154203 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:54:05.169393 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m14:54:05.171485 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m14:54:05.173616 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m14:54:05.179989 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.004 seconds
+[0m14:54:05.183462 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m14:54:05.185792 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m14:54:05.188484 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now list_telegram_db_raw_analytics)
+[0m14:54:05.194991 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:54:05.305757 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m14:54:05.312168 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:54:05.356494 [debug] [ThreadPool]: SQL status: BEGIN in 0.044 seconds
+[0m14:54:05.362081 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m14:54:05.368740 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m14:54:05.387314 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.012 seconds
+[0m14:54:05.398247 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m14:54:05.403654 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m14:54:05.426326 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:05.430036 [debug] [MainThread]: On master: BEGIN
+[0m14:54:05.433563 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:54:05.528123 [debug] [MainThread]: SQL status: BEGIN in 0.094 seconds
+[0m14:54:05.533701 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:05.538332 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:54:05.570273 [debug] [MainThread]: SQL status: SELECT 1 in 0.027 seconds
+[0m14:54:05.574048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea733ee60>]}
+[0m14:54:05.576484 [debug] [MainThread]: On master: ROLLBACK
+[0m14:54:05.579357 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:05.581744 [debug] [MainThread]: On master: BEGIN
+[0m14:54:05.585105 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:54:05.587509 [debug] [MainThread]: On master: COMMIT
+[0m14:54:05.589683 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:05.591750 [debug] [MainThread]: On master: COMMIT
+[0m14:54:05.594373 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:54:05.596578 [debug] [MainThread]: On master: Close
+[0m14:54:05.694069 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m14:54:05.701885 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m14:54:05.712480 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now model.telegram_dbt.fct_image_detections)
+[0m14:54:05.716794 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m14:54:05.751268 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m14:54:05.767852 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m14:54:05.894622 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m14:54:05.910651 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:54:05.913548 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m14:54:05.916291 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:54:05.929975 [debug] [Thread-1 (]: SQL status: BEGIN in 0.014 seconds
+[0m14:54:05.932400 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m14:54:05.934985 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel,
+    m.date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.message_id
+
+
+  );
+  
+  
+[0m14:54:06.094001 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column m.channel does not exist
+LINE 18:     m.channel,
+             ^
+HINT:  Perhaps you meant to reference the column "m.channel_id".
+
+[0m14:54:06.105027 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: ROLLBACK
+[0m14:54:06.114826 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m14:54:06.132387 [debug] [Thread-1 (]: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.channel does not exist
+  LINE 18:     m.channel,
+               ^
+  HINT:  Perhaps you meant to reference the column "m.channel_id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:54:06.146644 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6044885-4802-4630-9a00-e10d864c7afc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea7b77280>]}
+[0m14:54:06.152598 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model raw_analytics.fct_image_detections . [[31mERROR[0m in 0.42s]
+[0m14:54:06.156993 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m14:54:06.159713 [debug] [Thread-4 (]: Marking all children of 'model.telegram_dbt.fct_image_detections' to be skipped because of status 'error'.  Reason: Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.channel does not exist
+  LINE 18:     m.channel,
+               ^
+  HINT:  Perhaps you meant to reference the column "m.channel_id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql.
+[0m14:54:06.165200 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:06.167378 [debug] [MainThread]: On master: BEGIN
+[0m14:54:06.169514 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:54:06.185240 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m14:54:06.187411 [debug] [MainThread]: On master: COMMIT
+[0m14:54:06.189407 [debug] [MainThread]: Using postgres connection "master"
+[0m14:54:06.191653 [debug] [MainThread]: On master: COMMIT
+[0m14:54:06.194748 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:54:06.197609 [debug] [MainThread]: On master: Close
+[0m14:54:06.327810 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:54:06.335261 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m14:54:06.346813 [info ] [MainThread]: 
+[0m14:54:06.363111 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 1.35 seconds (1.35s).
+[0m14:54:06.375411 [debug] [MainThread]: Command end result
+[0m14:54:06.469840 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:54:06.480875 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:54:06.533622 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m14:54:06.536219 [info ] [MainThread]: 
+[0m14:54:06.541464 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:54:06.547298 [info ] [MainThread]: 
+[0m14:54:06.551160 [error] [MainThread]: [31mFailure in model fct_image_detections (models/marts/fct_image_detections.sql)[0m
+[0m14:54:06.554608 [error] [MainThread]:   Database Error in model fct_image_detections (models/marts/fct_image_detections.sql)
+  column m.channel does not exist
+  LINE 18:     m.channel,
+               ^
+  HINT:  Perhaps you meant to reference the column "m.channel_id".
+  compiled code at target/run/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:54:06.557863 [info ] [MainThread]: 
+[0m14:54:06.564124 [info ] [MainThread]:   compiled code at target/compiled/telegram_dbt/models/marts/fct_image_detections.sql
+[0m14:54:06.567100 [info ] [MainThread]: 
+[0m14:54:06.570999 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:54:06.577964 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.2087555, "process_in_blocks": "0", "process_kernel_time": 0.296811, "process_mem_max_rss": "122884", "process_out_blocks": "0", "process_user_time": 5.194201}
+[0m14:54:06.581732 [debug] [MainThread]: Command `dbt run` failed at 14:54:06.581379 after 4.21 seconds
+[0m14:54:06.584337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea990c8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea90c4cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ea90a3e80>]}
+[0m14:54:06.586606 [debug] [MainThread]: Flushing usage events
+[0m14:54:10.591434 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:56:31.546921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8259e0880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff82492ae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff82492aec0>]}
+
+
+============================== 14:56:31.552857 | 5c4f197c-5a98-470b-ab43-4dcad4f2ab2f ==============================
+[0m14:56:31.552857 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:56:31.557039 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select fct_image_detections', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:56:31.896856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5c4f197c-5a98-470b-ab43-4dcad4f2ab2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8248f4940>]}
+[0m14:56:32.031365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5c4f197c-5a98-470b-ab43-4dcad4f2ab2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8251ce1a0>]}
+[0m14:56:32.037297 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:56:32.260723 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m14:56:33.488004 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:56:33.683971 [debug] [MainThread]: Partial parsing: updated file: telegram_dbt://models/marts/fct_messages.sql
+[0m14:56:34.689386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5c4f197c-5a98-470b-ab43-4dcad4f2ab2f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff822428130>]}
+[0m14:56:34.935129 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m14:56:34.947269 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m14:56:34.969346 [error] [MainThread]: Encountered an error:
+Found a cycle: model.telegram_dbt.fct_messages
+[0m14:56:35.058536 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 285, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 355, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 372, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/main.py", line 586, in run
+    results = task.run()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/runnable.py", line 583, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/compile.py", line 133, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/runnable.py", line 170, in _runtime_initialize
+    self.compile_manifest()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/base.py", line 135, in compile_manifest
+    self.graph = self.compiler.compile(self.manifest)
+  File "/usr/local/lib/python3.10/site-packages/dbt/compilation.py", line 662, in compile
+    linker.link_graph(manifest)
+  File "/usr/local/lib/python3.10/site-packages/dbt/compilation.py", line 206, in link_graph
+    raise RuntimeError("Found a cycle: {}".format(cycle))
+RuntimeError: Found a cycle: model.telegram_dbt.fct_messages
+
+[0m14:56:35.063489 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.6517472, "process_in_blocks": "152", "process_kernel_time": 0.199755, "process_mem_max_rss": "112860", "process_out_blocks": "0", "process_user_time": 4.61435}
+[0m14:56:35.068644 [debug] [MainThread]: Command `dbt run` failed at 14:56:35.068132 after 3.66 seconds
+[0m14:56:35.071742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8259e0880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff822428310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff82242b430>]}
+[0m14:56:35.076221 [debug] [MainThread]: Flushing usage events
+[0m14:56:36.209061 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:01:01.143127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c4dc4880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3d1ae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3d1aec0>]}
+
+
+============================== 15:01:01.149593 | 6033cc16-c5cf-4655-a242-add5f64cda5d ==============================
+[0m15:01:01.149593 [info ] [MainThread]: Running with dbt=1.10.4
+[0m15:01:01.153546 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'debug': 'False', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select fct_image_detections', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:01:01.524662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3d1ae30>]}
+[0m15:01:01.650672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3ea9180>]}
+[0m15:01:01.653692 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:01:01.851311 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m15:01:02.344326 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m15:01:02.346860 [debug] [MainThread]: Partial parsing: updated file: telegram_dbt://models/marts/fct_image_detections.sql
+[0m15:01:02.349439 [debug] [MainThread]: Partial parsing: updated file: telegram_dbt://models/marts/fct_messages.sql
+[0m15:01:03.368647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3375810>]}
+[0m15:01:03.635636 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m15:01:03.646482 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m15:01:03.679887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c1f5b970>]}
+[0m15:01:03.682291 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m15:01:03.685248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c2b7a710>]}
+[0m15:01:03.690870 [info ] [MainThread]: 
+[0m15:01:03.693653 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:01:03.697347 [info ] [MainThread]: 
+[0m15:01:03.701565 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:01:03.705326 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m15:01:03.795233 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m15:01:03.797446 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:01:03.799719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:01:03.814584 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.015 seconds
+[0m15:01:03.818293 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m15:01:03.830048 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_analytics)
+[0m15:01:03.844502 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m15:01:03.846570 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m15:01:03.848622 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:01:03.862556 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m15:01:03.864625 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m15:01:03.866618 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m15:01:03.872297 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.004 seconds
+[0m15:01:03.875901 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m15:01:03.878046 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m15:01:04.481032 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now list_telegram_db_raw_staging)
+[0m15:01:04.518346 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m15:01:04.524615 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m15:01:04.528769 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:01:04.549377 [debug] [ThreadPool]: SQL status: BEGIN in 0.021 seconds
+[0m15:01:04.551644 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m15:01:04.554471 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m15:01:04.560614 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.004 seconds
+[0m15:01:04.564665 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m15:01:04.567220 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m15:01:04.590433 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:04.594293 [debug] [MainThread]: On master: BEGIN
+[0m15:01:04.601603 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:01:04.620699 [debug] [MainThread]: SQL status: BEGIN in 0.024 seconds
+[0m15:01:04.623480 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:04.626320 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:01:04.646653 [debug] [MainThread]: SQL status: SELECT 1 in 0.017 seconds
+[0m15:01:04.649841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c23a4190>]}
+[0m15:01:04.651819 [debug] [MainThread]: On master: ROLLBACK
+[0m15:01:04.654159 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:04.656558 [debug] [MainThread]: On master: BEGIN
+[0m15:01:04.659555 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m15:01:04.661520 [debug] [MainThread]: On master: COMMIT
+[0m15:01:04.663455 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:04.665147 [debug] [MainThread]: On master: COMMIT
+[0m15:01:04.667201 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:01:04.668915 [debug] [MainThread]: On master: Close
+[0m15:01:04.674508 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m15:01:04.676698 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m15:01:04.679608 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now model.telegram_dbt.fct_image_detections)
+[0m15:01:04.682199 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m15:01:04.703390 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m15:01:04.717092 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m15:01:04.846003 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m15:01:04.858533 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:01:04.860604 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m15:01:04.862700 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:01:04.890805 [debug] [Thread-1 (]: SQL status: BEGIN in 0.028 seconds
+[0m15:01:04.893219 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:01:04.895629 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel_id,
+    m.date_day AS date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.message_id
+
+
+  );
+  
+  
+[0m15:01:04.952667 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.054 seconds
+[0m15:01:04.992348 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m15:01:05.001833 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:01:05.004280 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m15:01:05.019467 [debug] [Thread-1 (]: SQL status: COMMIT in 0.013 seconds
+[0m15:01:05.025200 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m15:01:05.030395 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6033cc16-c5cf-4655-a242-add5f64cda5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c1b5efe0>]}
+[0m15:01:05.037867 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model raw_analytics.fct_image_detections ..... [[32mSELECT 0[0m in 0.35s]
+[0m15:01:05.042008 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m15:01:05.046711 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:05.049220 [debug] [MainThread]: On master: BEGIN
+[0m15:01:05.051734 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:01:05.065724 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m15:01:05.067762 [debug] [MainThread]: On master: COMMIT
+[0m15:01:05.071155 [debug] [MainThread]: Using postgres connection "master"
+[0m15:01:05.074315 [debug] [MainThread]: On master: COMMIT
+[0m15:01:05.077692 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:01:05.079781 [debug] [MainThread]: On master: Close
+[0m15:01:05.082074 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:01:05.084052 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m15:01:05.086377 [info ] [MainThread]: 
+[0m15:01:05.090255 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 1.39 seconds (1.39s).
+[0m15:01:05.094738 [debug] [MainThread]: Command end result
+[0m15:01:05.188135 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m15:01:05.198941 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m15:01:05.221167 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m15:01:05.223125 [info ] [MainThread]: 
+[0m15:01:05.231936 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:01:05.235046 [info ] [MainThread]: 
+[0m15:01:05.239895 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:01:05.246080 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.3081064, "process_in_blocks": "0", "process_kernel_time": 0.320936, "process_mem_max_rss": "126572", "process_out_blocks": "0", "process_user_time": 5.787917}
+[0m15:01:05.251210 [debug] [MainThread]: Command `dbt run` succeeded at 15:01:05.250874 after 4.31 seconds
+[0m15:01:05.253915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c4dc4880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c1b7d030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f52c3d1ae30>]}
+[0m15:01:05.257562 [debug] [MainThread]: Flushing usage events
+[0m15:01:06.328999 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:13:04.650462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd194d0970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd18425810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd184257b0>]}
+
+
+============================== 15:13:04.660996 | 63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11 ==============================
+[0m15:13:04.660996 [info ] [MainThread]: Running with dbt=1.10.4
+[0m15:13:04.665477 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select fct_image_detections --full-refresh', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:13:05.756996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd17b4edd0>]}
+[0m15:13:05.912768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd18cc0d30>]}
+[0m15:13:05.917922 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:13:06.300158 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m15:13:07.130290 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:13:07.132498 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:13:07.268080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd16764130>]}
+[0m15:13:07.548748 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m15:13:07.565237 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m15:13:07.675410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd16766230>]}
+[0m15:13:07.677961 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m15:13:07.682757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd167661a0>]}
+[0m15:13:07.690739 [info ] [MainThread]: 
+[0m15:13:07.695168 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:13:07.706488 [info ] [MainThread]: 
+[0m15:13:07.711140 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:13:07.716364 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m15:13:08.829004 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m15:13:08.831768 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:13:08.834422 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:13:08.891601 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.057 seconds
+[0m15:13:08.896456 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m15:13:08.911933 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_analytics)
+[0m15:13:08.928366 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m15:13:08.930850 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m15:13:08.933253 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:13:08.947871 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m15:13:08.950131 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m15:13:08.952452 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m15:13:09.262740 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.304 seconds
+[0m15:13:09.277061 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m15:13:09.283434 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m15:13:09.291546 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now list_telegram_db_raw_staging)
+[0m15:13:09.306889 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m15:13:09.309918 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m15:13:09.312690 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:13:09.331141 [debug] [ThreadPool]: SQL status: BEGIN in 0.018 seconds
+[0m15:13:09.333617 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m15:13:09.336174 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m15:13:09.344816 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.006 seconds
+[0m15:13:09.349745 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m15:13:09.352642 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m15:13:09.370743 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:09.373704 [debug] [MainThread]: On master: BEGIN
+[0m15:13:09.376663 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:13:09.395248 [debug] [MainThread]: SQL status: BEGIN in 0.019 seconds
+[0m15:13:09.397942 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:09.400447 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:13:09.419501 [debug] [MainThread]: SQL status: SELECT 1 in 0.017 seconds
+[0m15:13:09.424783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd16be7730>]}
+[0m15:13:09.431546 [debug] [MainThread]: On master: ROLLBACK
+[0m15:13:09.435197 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:09.437719 [debug] [MainThread]: On master: BEGIN
+[0m15:13:09.440890 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m15:13:09.443081 [debug] [MainThread]: On master: COMMIT
+[0m15:13:09.445403 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:09.447422 [debug] [MainThread]: On master: COMMIT
+[0m15:13:09.449777 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:13:09.452116 [debug] [MainThread]: On master: Close
+[0m15:13:09.541315 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m15:13:09.544966 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m15:13:09.548601 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now model.telegram_dbt.fct_image_detections)
+[0m15:13:09.551643 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m15:13:09.596892 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m15:13:09.614667 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m15:13:09.737960 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m15:13:09.758516 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:09.761809 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m15:13:09.764793 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:13:09.786946 [debug] [Thread-1 (]: SQL status: BEGIN in 0.022 seconds
+[0m15:13:09.789610 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:09.792607 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel_id,
+    m.date_day AS date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.message_id
+
+
+  );
+  
+  
+[0m15:13:10.079795 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.284 seconds
+[0m15:13:10.134939 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:10.137501 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+alter table "telegram_db"."raw_analytics"."fct_image_detections" rename to "fct_image_detections__dbt_backup"
+[0m15:13:10.140705 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m15:13:10.148607 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:10.150944 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+alter table "telegram_db"."raw_analytics"."fct_image_detections__dbt_tmp" rename to "fct_image_detections"
+[0m15:13:10.154020 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m15:13:10.190889 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m15:13:10.193261 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:10.195406 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m15:13:10.250413 [debug] [Thread-1 (]: SQL status: COMMIT in 0.053 seconds
+[0m15:13:10.265627 [debug] [Thread-1 (]: Applying DROP to: "telegram_db"."raw_analytics"."fct_image_detections__dbt_backup"
+[0m15:13:10.275886 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m15:13:10.278229 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+drop table if exists "telegram_db"."raw_analytics"."fct_image_detections__dbt_backup" cascade
+[0m15:13:10.417955 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.137 seconds
+[0m15:13:10.423996 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m15:13:10.611157 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '63c29aaa-d63e-4042-8e4e-3d0b9e2cbe11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd15585840>]}
+[0m15:13:10.614188 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model raw_analytics.fct_image_detections ..... [[32mSELECT 0[0m in 1.06s]
+[0m15:13:10.620224 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m15:13:10.626731 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:10.629231 [debug] [MainThread]: On master: BEGIN
+[0m15:13:10.631349 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:13:10.647896 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m15:13:10.650475 [debug] [MainThread]: On master: COMMIT
+[0m15:13:10.653019 [debug] [MainThread]: Using postgres connection "master"
+[0m15:13:10.658481 [debug] [MainThread]: On master: COMMIT
+[0m15:13:10.661067 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:13:10.662876 [debug] [MainThread]: On master: Close
+[0m15:13:10.781207 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:13:10.784436 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m15:13:10.787126 [info ] [MainThread]: 
+[0m15:13:10.792195 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 3.08 seconds (3.08s).
+[0m15:13:10.800559 [debug] [MainThread]: Command end result
+[0m15:13:10.949443 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m15:13:10.964943 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m15:13:11.001713 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m15:13:11.004701 [info ] [MainThread]: 
+[0m15:13:11.009093 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:13:11.013532 [info ] [MainThread]: 
+[0m15:13:11.017721 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:13:11.174427 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.7390146, "process_in_blocks": "88568", "process_kernel_time": 0.492488, "process_mem_max_rss": "121400", "process_out_blocks": "0", "process_user_time": 6.070459}
+[0m15:13:11.176823 [debug] [MainThread]: Command `dbt run` succeeded at 15:13:11.176530 after 6.74 seconds
+[0m15:13:11.178969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd194d0970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1af36b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd177d5b10>]}
+[0m15:13:11.181113 [debug] [MainThread]: Flushing usage events
+[0m15:13:12.320458 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:30:16.733219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f7b78880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f6aeae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f6aeaec0>]}
+
+
+============================== 16:30:16.968559 | ff70fcd3-fd6f-4982-b665-0a5c3659e164 ==============================
+[0m16:30:16.968559 [info ] [MainThread]: Running with dbt=1.10.4
+[0m16:30:16.976373 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/app/dbt/telegram_dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select fct_image_detections', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:30:18.668514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f6aeae30>]}
+[0m16:30:19.336677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f6e69180>]}
+[0m16:30:19.400269 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:30:20.462165 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m16:30:21.263406 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m16:30:21.269810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f73127d0>]}
+[0m16:30:26.130639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f41effa0>]}
+[0m16:30:26.497186 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m16:30:26.509824 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m16:30:26.581435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7efb13520>]}
+[0m16:30:26.584106 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m16:30:26.587353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7efb134c0>]}
+[0m16:30:26.593359 [info ] [MainThread]: 
+[0m16:30:26.596703 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:30:26.599738 [info ] [MainThread]: 
+[0m16:30:26.611110 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:30:26.620422 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m16:30:27.078509 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m16:30:27.081124 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:30:27.083398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:30:27.159442 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.076 seconds
+[0m16:30:27.164665 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m16:30:27.185646 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_staging)
+[0m16:30:27.213191 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m16:30:27.215542 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m16:30:27.217785 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:30:27.235063 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m16:30:27.237438 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m16:30:27.239599 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m16:30:27.277587 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.035 seconds
+[0m16:30:27.282720 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m16:30:27.287899 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m16:30:27.290469 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now list_telegram_db_raw_analytics)
+[0m16:30:27.298591 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m16:30:27.300424 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m16:30:27.302064 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:30:27.314807 [debug] [ThreadPool]: SQL status: BEGIN in 0.013 seconds
+[0m16:30:27.316658 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m16:30:27.318568 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m16:30:27.324900 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.005 seconds
+[0m16:30:27.328385 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m16:30:27.330261 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m16:30:27.343857 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:27.345670 [debug] [MainThread]: On master: BEGIN
+[0m16:30:27.347706 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:30:27.365035 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m16:30:27.370677 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:27.374493 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:30:27.452142 [debug] [MainThread]: SQL status: SELECT 1 in 0.074 seconds
+[0m16:30:27.456330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7efb13b80>]}
+[0m16:30:27.458904 [debug] [MainThread]: On master: ROLLBACK
+[0m16:30:27.461635 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:27.464092 [debug] [MainThread]: On master: BEGIN
+[0m16:30:27.467331 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:30:27.469486 [debug] [MainThread]: On master: COMMIT
+[0m16:30:27.471657 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:27.473880 [debug] [MainThread]: On master: COMMIT
+[0m16:30:27.476298 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:30:27.478404 [debug] [MainThread]: On master: Close
+[0m16:30:27.502010 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m16:30:27.505897 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m16:30:27.510932 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now model.telegram_dbt.fct_image_detections)
+[0m16:30:27.516154 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m16:30:27.558250 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m16:30:27.647427 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m16:30:27.839416 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:27.841813 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+    
+  
+    
+
+  create temporary table "fct_image_detections__dbt_tmp163027770356"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel_id,
+    m.date_day AS date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.message_id
+
+
+WHERE d.id > (SELECT MAX(detection_id) FROM "telegram_db"."raw_analytics"."fct_image_detections")
+
+  );
+  
+  
+[0m16:30:27.843898 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:30:27.909225 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.065 seconds
+[0m16:30:27.956544 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:27.959272 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m16:30:27.962790 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m16:30:27.965583 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:27.968772 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fct_image_detections__dbt_tmp163027770356'
+        
+      order by ordinal_position
+
+  
+[0m16:30:28.022124 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.051 seconds
+[0m16:30:28.035750 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:28.038272 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "telegram_db".INFORMATION_SCHEMA.columns
+      where table_name = 'fct_image_detections'
+        
+        and table_schema = 'raw_analytics'
+        
+      order by ordinal_position
+
+  
+[0m16:30:28.045625 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.005 seconds
+[0m16:30:28.064567 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:28.066614 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "telegram_db".INFORMATION_SCHEMA.columns
+      where table_name = 'fct_image_detections'
+        
+        and table_schema = 'raw_analytics'
+        
+      order by ordinal_position
+
+  
+[0m16:30:28.072171 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.003 seconds
+[0m16:30:28.108608 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m16:30:28.121278 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:28.124288 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+        
+        
+        delete from "telegram_db"."raw_analytics"."fct_image_detections" as DBT_INTERNAL_DEST
+        where (detection_id) in (
+            select distinct detection_id
+            from "fct_image_detections__dbt_tmp163027770356" as DBT_INTERNAL_SOURCE
+        );
+
+    
+
+    insert into "telegram_db"."raw_analytics"."fct_image_detections" ("detection_id", "message_id", "channel_id", "date", "object_class", "confidence")
+    (
+        select "detection_id", "message_id", "channel_id", "date", "object_class", "confidence"
+        from "fct_image_detections__dbt_tmp163027770356"
+    )
+  
+[0m16:30:28.128803 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.002 seconds
+[0m16:30:28.219876 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m16:30:28.356954 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:30:28.359383 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m16:30:28.367940 [debug] [Thread-1 (]: SQL status: COMMIT in 0.006 seconds
+[0m16:30:28.373944 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m16:30:28.509133 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff70fcd3-fd6f-4982-b665-0a5c3659e164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f935cb20>]}
+[0m16:30:28.513348 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model raw_analytics.fct_image_detections ..... [[32mINSERT 0 0[0m in 0.87s]
+[0m16:30:28.520489 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m16:30:28.527690 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:28.530499 [debug] [MainThread]: On master: BEGIN
+[0m16:30:28.533173 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:30:28.552137 [debug] [MainThread]: SQL status: BEGIN in 0.019 seconds
+[0m16:30:28.559509 [debug] [MainThread]: On master: COMMIT
+[0m16:30:28.561738 [debug] [MainThread]: Using postgres connection "master"
+[0m16:30:28.564226 [debug] [MainThread]: On master: COMMIT
+[0m16:30:28.567097 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:30:28.569551 [debug] [MainThread]: On master: Close
+[0m16:30:28.573893 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:30:28.575991 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m16:30:28.578410 [info ] [MainThread]: 
+[0m16:30:28.582528 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 1.97 seconds (1.97s).
+[0m16:30:28.587411 [debug] [MainThread]: Command end result
+[0m16:30:28.691852 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m16:30:28.702157 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m16:30:29.031824 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m16:30:29.035526 [info ] [MainThread]: 
+[0m16:30:29.039929 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:30:29.046033 [info ] [MainThread]: 
+[0m16:30:29.050738 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:30:29.355217 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 13.31053, "process_in_blocks": "40968", "process_kernel_time": 0.919732, "process_mem_max_rss": "130072", "process_out_blocks": "0", "process_user_time": 12.246434}
+[0m16:30:29.360734 [debug] [MainThread]: Command `dbt run` succeeded at 16:30:29.360269 after 13.32 seconds
+[0m16:30:29.363995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f7b78880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f7a0cc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd7f41d0ee0>]}
+[0m16:30:29.367286 [debug] [MainThread]: Flushing usage events
+[0m16:30:30.657032 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:42:00.774650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e285d88b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e2753ee60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e2753eec0>]}
+
+
+============================== 16:42:00.788531 | 7f3ab508-ceed-4a27-aa43-e5ddbd57b602 ==============================
+[0m16:42:00.788531 [info ] [MainThread]: Running with dbt=1.10.4
+[0m16:42:00.792855 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/app/dbt/telegram_dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select fct_image_detections --full-refresh', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:42:01.764423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e2753ee30>]}
+[0m16:42:01.898520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e27d6eda0>]}
+[0m16:42:02.069602 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:42:02.589712 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m16:42:03.538953 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:42:03.541285 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:42:03.690795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e25584130>]}
+[0m16:42:03.986186 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m16:42:03.998725 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m16:42:04.104925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e255041c0>]}
+[0m16:42:04.108068 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 434 macros
+[0m16:42:04.111480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e25507970>]}
+[0m16:42:04.118864 [info ] [MainThread]: 
+[0m16:42:04.122956 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:42:04.129365 [info ] [MainThread]: 
+[0m16:42:04.138915 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:42:04.143039 [debug] [ThreadPool]: Acquiring new postgres connection 'list_telegram_db'
+[0m16:42:04.421035 [debug] [ThreadPool]: Using postgres connection "list_telegram_db"
+[0m16:42:04.423625 [debug] [ThreadPool]: On list_telegram_db: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:42:04.426090 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:42:04.486612 [debug] [ThreadPool]: SQL status: SELECT 11 in 0.061 seconds
+[0m16:42:04.491405 [debug] [ThreadPool]: On list_telegram_db: Close
+[0m16:42:04.504834 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db, now list_telegram_db_raw_staging)
+[0m16:42:04.520313 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m16:42:04.522796 [debug] [ThreadPool]: On list_telegram_db_raw_staging: BEGIN
+[0m16:42:04.525043 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:42:04.542489 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m16:42:04.545003 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_staging"
+[0m16:42:04.547464 [debug] [ThreadPool]: On list_telegram_db_raw_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_staging"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_staging'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_staging'
+  
+[0m16:42:04.679425 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.129 seconds
+[0m16:42:04.685599 [debug] [ThreadPool]: On list_telegram_db_raw_staging: ROLLBACK
+[0m16:42:04.689953 [debug] [ThreadPool]: On list_telegram_db_raw_staging: Close
+[0m16:42:04.694403 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_telegram_db_raw_staging, now list_telegram_db_raw_analytics)
+[0m16:42:04.702225 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m16:42:04.704302 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: BEGIN
+[0m16:42:04.706289 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:42:04.721295 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m16:42:04.723388 [debug] [ThreadPool]: Using postgres connection "list_telegram_db_raw_analytics"
+[0m16:42:04.725399 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "list_telegram_db_raw_analytics"} */
+select
+      'telegram_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw_analytics'
+    union all
+    select
+      'telegram_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw_analytics'
+  
+[0m16:42:04.736548 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.009 seconds
+[0m16:42:04.740211 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: ROLLBACK
+[0m16:42:04.742726 [debug] [ThreadPool]: On list_telegram_db_raw_analytics: Close
+[0m16:42:04.756589 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:04.758987 [debug] [MainThread]: On master: BEGIN
+[0m16:42:04.822352 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:42:04.869553 [debug] [MainThread]: SQL status: BEGIN in 0.047 seconds
+[0m16:42:04.874408 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:04.877493 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:42:04.905960 [debug] [MainThread]: SQL status: SELECT 1 in 0.025 seconds
+[0m16:42:04.909793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e25533970>]}
+[0m16:42:04.912289 [debug] [MainThread]: On master: ROLLBACK
+[0m16:42:04.915093 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:04.917333 [debug] [MainThread]: On master: BEGIN
+[0m16:42:04.920368 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:42:04.922602 [debug] [MainThread]: On master: COMMIT
+[0m16:42:04.924967 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:04.927250 [debug] [MainThread]: On master: COMMIT
+[0m16:42:04.929853 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:42:04.931985 [debug] [MainThread]: On master: Close
+[0m16:42:04.945113 [debug] [Thread-1 (]: Began running node model.telegram_dbt.fct_image_detections
+[0m16:42:04.947584 [info ] [Thread-1 (]: 1 of 1 START sql incremental model raw_analytics.fct_image_detections .......... [RUN]
+[0m16:42:04.956009 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_telegram_db_raw_analytics, now model.telegram_dbt.fct_image_detections)
+[0m16:42:04.959600 [debug] [Thread-1 (]: Began compiling node model.telegram_dbt.fct_image_detections
+[0m16:42:05.012896 [debug] [Thread-1 (]: Writing injected SQL for node "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.032293 [debug] [Thread-1 (]: Began executing node model.telegram_dbt.fct_image_detections
+[0m16:42:05.190155 [debug] [Thread-1 (]: Writing runtime sql for node "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.201251 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.203167 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: BEGIN
+[0m16:42:05.205052 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:42:05.218386 [debug] [Thread-1 (]: SQL status: BEGIN in 0.013 seconds
+[0m16:42:05.220147 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.221973 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+
+      
+  
+    
+
+  create  table "telegram_db"."raw_analytics"."fct_image_detections__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    d.id AS detection_id,
+    d.message_id,
+    m.channel_id,
+    m.date_day AS date,
+    d.object_class,
+    d.confidence
+FROM "telegram_db"."raw"."image_detections" d
+LEFT JOIN "telegram_db"."raw_analytics"."fct_messages" m
+    ON d.message_id = m.message_id
+
+
+  );
+  
+  
+[0m16:42:05.302636 [debug] [Thread-1 (]: SQL status: SELECT 1235 in 0.078 seconds
+[0m16:42:05.330361 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.332965 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+alter table "telegram_db"."raw_analytics"."fct_image_detections" rename to "fct_image_detections__dbt_backup"
+[0m16:42:05.337714 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m16:42:05.345437 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.347561 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+alter table "telegram_db"."raw_analytics"."fct_image_detections__dbt_tmp" rename to "fct_image_detections"
+[0m16:42:05.349958 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:42:05.398442 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m16:42:05.400654 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.402911 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: COMMIT
+[0m16:42:05.414776 [debug] [Thread-1 (]: SQL status: COMMIT in 0.010 seconds
+[0m16:42:05.429415 [debug] [Thread-1 (]: Applying DROP to: "telegram_db"."raw_analytics"."fct_image_detections__dbt_backup"
+[0m16:42:05.439782 [debug] [Thread-1 (]: Using postgres connection "model.telegram_dbt.fct_image_detections"
+[0m16:42:05.441783 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "telegram_dbt", "target_name": "dev", "node_id": "model.telegram_dbt.fct_image_detections"} */
+drop table if exists "telegram_db"."raw_analytics"."fct_image_detections__dbt_backup" cascade
+[0m16:42:05.603550 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.160 seconds
+[0m16:42:05.610212 [debug] [Thread-1 (]: On model.telegram_dbt.fct_image_detections: Close
+[0m16:42:05.619627 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f3ab508-ceed-4a27-aa43-e5ddbd57b602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e246a5ba0>]}
+[0m16:42:05.622838 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model raw_analytics.fct_image_detections ..... [[32mSELECT 1235[0m in 0.66s]
+[0m16:42:05.630641 [debug] [Thread-1 (]: Finished running node model.telegram_dbt.fct_image_detections
+[0m16:42:05.635557 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:05.637891 [debug] [MainThread]: On master: BEGIN
+[0m16:42:05.640372 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:42:05.656647 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m16:42:05.658885 [debug] [MainThread]: On master: COMMIT
+[0m16:42:05.663967 [debug] [MainThread]: Using postgres connection "master"
+[0m16:42:05.666689 [debug] [MainThread]: On master: COMMIT
+[0m16:42:05.669977 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:42:05.672303 [debug] [MainThread]: On master: Close
+[0m16:42:05.675595 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:42:05.678426 [debug] [MainThread]: Connection 'model.telegram_dbt.fct_image_detections' was properly closed.
+[0m16:42:05.681522 [info ] [MainThread]: 
+[0m16:42:05.684554 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 1.55 seconds (1.55s).
+[0m16:42:05.689798 [debug] [MainThread]: Command end result
+[0m16:42:05.853098 [debug] [MainThread]: Wrote artifact WritableManifest to /app/dbt/telegram_dbt/target/manifest.json
+[0m16:42:05.863592 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/dbt/telegram_dbt/target/semantic_manifest.json
+[0m16:42:05.886244 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/dbt/telegram_dbt/target/run_results.json
+[0m16:42:05.888420 [info ] [MainThread]: 
+[0m16:42:05.893660 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:42:05.897263 [info ] [MainThread]: 
+[0m16:42:05.900706 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:42:06.024684 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.4587326, "process_in_blocks": "71888", "process_kernel_time": 0.824283, "process_mem_max_rss": "119164", "process_out_blocks": "0", "process_user_time": 6.037878}
+[0m16:42:06.033876 [debug] [MainThread]: Command `dbt run` succeeded at 16:42:06.033075 after 5.47 seconds
+[0m16:42:06.039132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e285d88b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e25587d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7e28470ac0>]}
+[0m16:42:06.043002 [debug] [MainThread]: Flushing usage events
+[0m16:42:07.148097 [debug] [MainThread]: An error was encountered while trying to flush usage events

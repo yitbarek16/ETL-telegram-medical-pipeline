@@ -12,5 +12,6 @@ models:
       +schema: staging
       +materialized: view
     marts:
-        +schema: analytics
-        +materialized: table
+      +schema: analytics
+      +materialized: table
+# docker exec -it etl-telegram-medical-pipeline-db-1 psql -U postgres -d telegram_db
