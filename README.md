@@ -40,4 +40,44 @@ This project builds a full ETL (Extract, Transform, Load) pipeline to collect, p
   dbt run --select staging
   dbt run --select marts
 
+## Analytical Data Modeling with dbt
 
+** Goal:**  
+Transform raw Telegram messages and YOLOv5 image detection data into clean, analytical models using [dbt].
+
+### Setup
+
+- Installed `dbt-postgres`
+- Configured `profiles.yml` to connect to PostgreSQL
+- Defined models in the following structure:
+
+
+###  Summary of Models
+
+| Model Name              | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `stg_telegram_messages` | Cleaned and standardized Telegram messages                                  |
+| `stg_image_detections`  | Cleaned YOLOv5 output (object classes and bounding boxes)                   |
+| `fct_messages`          | Fact table with metadata like `channel_id`, `message_id`, `media_type`, etc. |
+| `fct_image_detections`  | Analytical view to count and explore object detection results per message   |
+
+##  Analytical API with FastAPI
+
+** Goal:**  
+Build a REST API that serves analytical insights from DBT-transformed data.
+
+###  Tech Stack
+
+- FastAPI  
+- Uvicorn  
+- psycopg2-binary  
+
+## Pipeline Orchestration with Dagster
+
+**Goal:**  
+Convert the data pipeline into a robust, observable job using [Dagster](https://dagster.io/).
+
+### Setup
+
+```bash
+pip install dagster dagster-webserver
