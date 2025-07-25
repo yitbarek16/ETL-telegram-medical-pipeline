@@ -1,8 +1,9 @@
 # dagster_pipeline/repository.py
 
-from dagster import repository
 from .pipeline_job import pipeline_job
+from dagster import Definitions
 
-@repository
-def telegram_pipeline_repo():
-    return [pipeline_job]
+
+defs = Definitions(
+    jobs=[pipeline_job],
+)

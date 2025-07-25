@@ -1,47 +1,29 @@
-# dagster_pipeline/pipeline_job.py
+from dagster import job, op
 
-from dagster import op, job
 import subprocess
 
 @op
 def scrape_telegram_data():
-    # Run your telegram scraping script (adjust the command if needed)
-    result = subprocess.run(["bash", "scripts/scrape_telegram.sh"], capture_output=True, text=True)
-    if result.returncode != 0:
-        raise Exception(f"Scraping failed: {result.stderr}")
-    print(result.stdout)
-    return "Scraping done"
+    subprocess.run(["python", "scripts/scrape_telegram.py"], check=True)
 
 @op
-def load_raw_to_postgres():
-    # Run your raw data loading script
-    result = subprocess.run(["bash", "scripts/load_raw_to_postgres.sh"], capture_output=True, text=True)
-    if result.returncode != 0:
-        raise Exception(f"Loading raw to Postgres failed: {result.stderr}")
-    print(result.stdout)
-    return "Load to Postgres done"
+def load_raw_to_postgres(_):
+    subprocess.run(["python", "scripts/load_to_postgres.py"], check=True)
 
 @op
-def run_dbt_transformations():
-    # Run your dbt transformations
-    result = subprocess.run(["dbt", "run"], capture_output=True, text=True)
-    if result.returncode != 0:
-        raise Exception(f"DBT run failed: {result.stderr}")
-    print(result.stdout)
-    return "DBT transformations done"
+def run_dbt_transformations(_):
+    subprocess.run(["dbt", "run", "--profiles-dir", ".", "--project-dir", "."], check=True)
 
 @op
-def run_yolo_enrichment():
-    # Run your YOLO enrichment script
-    result = subprocess.run(["bash", "scripts/run_yolo.sh"], capture_output=True, text=True)
-    if result.returncode != 0:
-        raise Exception(f"YOLO enrichment failed: {result.stderr}")
-    print(result.stdout)
-    return "YOLO enrichment done"
+def run_yolo_enrichment(_):
+    subprocess.run(["python", "scripts/detect_objects.py"], check=True)
 
 @job
 def pipeline_job():
-    scrape_result = scrape_telegram_data()
-    load_result = load_raw_to_postgres()
-    dbt_result = run_dbt_transformations()
-    yolo_result = run_yolo_enrichment()
+    run_yolo_enrichment(
+        run_dbt_transformations(
+            load_raw_to_postgres(
+                scrape_telegram_data()
+            )
+        )
+    )

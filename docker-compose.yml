@@ -12,7 +12,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  python:
+  dagster:
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -20,12 +20,13 @@ services:
       - .env
     depends_on:
       - db
-    working_dir: /app/dbt/telegram_dbt
+    working_dir: /app
     volumes:
       - .:/app
       - /c/Users/user/.dbt:/root/.dbt
     ports:
-      - "8000:8000" 
-    command: tail -f /dev/null 
+      - "3000:3000" # Dagster UI
+    command: ["dagster", "dev", "-h", "0.0.0.0", "-p", "3000"]
+
 volumes:
   pgdata:

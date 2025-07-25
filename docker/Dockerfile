@@ -15,9 +15,14 @@ RUN apt-get update && apt-get install -y \
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
- && pip install --no-cache-dir -r requirements.txt
+ && pip install --no-cache-dir -r requirements.txt \
+ && pip install dagster dagster-webserver uvicorn fastapi psycopg2-binary
 
 # Copy source code
 COPY . /app
 
-CMD ["python", "scripts/detect_objects.py"]
+# Expose Dagster UI port
+EXPOSE 3000
+
+# Default command: start Dagster UI
+CMD ["dagster", "dev"]
