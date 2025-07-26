@@ -5,4 +5,4 @@ dbt/target/
 dbt/logs/
 dbt/bash.exe.stackdump
 logs/
-
+.tmp_dagster_home_*
